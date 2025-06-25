@@ -26,6 +26,18 @@ def contains_duplicate(nums):
 # Time Complexity: O(n), where n is the number of elements in nums.
 #Space Complexity: O(n), in the worst case, where all elements are unique and stored in the set.
 
+
+# We can also append nums to a set as a set automatically handles duplicates. If the length of the set is less than the length of nums, it means there are duplicates.
+def contains_duplicate(nums):
+    return len(set(nums)) < len(nums)
+
+# intuition:
+# This approach leverages the properties of sets in Python, which do not allow duplicate values.
+
+# Time Complexity: O(n), where n is the number of elements in nums.
+# Space Complexity: O(n), for storing the elements in the set.
+
+
 # Example usage:
 
 if __name__ == "__main__":
